@@ -1,4 +1,6 @@
-package com.lite.litemainserver.api.dbTest
+package com.lite.litemainserver.api
+
+import com.lite.litemainserver.api.content.ContentRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -6,11 +8,10 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("api")
-class DBTestController(
+class ApiController(
     @Autowired
-    val dbTestRepository: DBTestRepository
+    val contentRepository: ContentRepository
 ) {
-    @GetMapping("/user")
-    fun getUser() = dbTestRepository.search_user()
-
+    @GetMapping("/content")
+    fun getContent() = contentRepository.getContent()
 }
