@@ -1,4 +1,4 @@
-package com.lite.litemainserver.api.dbTest.user
+package com.lite.litemainserver.api.user
 
 import jakarta.persistence.*
 
